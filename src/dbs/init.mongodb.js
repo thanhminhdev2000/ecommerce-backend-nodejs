@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 const { checkOverload } = require('../helpers/check.connect')
-const connectString = 'mongodb://localhost:27017/shopDEV'
+const {
+  db: { host, name, port },
+} = require('../config/config.mongodb')
+const connectString = `mongodb://${host}:${port}/${name}`
 
 class Database {
   constructor() {
@@ -17,7 +20,6 @@ class Database {
       .connect(connectString, { maxPoolSize: 50 })
       .then((_) => {
         console.log('Connected Mongodb Success')
-        checkOverload()
       })
       .catch((err) => console.log('Error Connect!'))
   }
