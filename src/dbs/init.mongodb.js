@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const { checkOverload } = require('../helpers/check.connect')
 const {
     db: { host, name, port },
 } = require('../config/config.mongodb')
@@ -21,7 +20,7 @@ class Database {
             .then((_) => {
                 console.log('Connected Mongodb Success')
             })
-            .catch((err) => console.log('Error Connect!'))
+            .catch((err) => console.log('Error Connect!', err))
     }
 
     static getInstance() {
