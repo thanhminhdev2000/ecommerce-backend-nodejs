@@ -1,8 +1,9 @@
-@url_dev=http://localhost:8080/v1/api/
+@url_dev=http://localhost:8080/v1/api
 ### signup
 
 POST {{url_dev}}/shop/signup
 Content-Type: application/json
+x-api-key: b68d54e06a92825a0340c11214a6b850d9eb738e98aa993f74bd3e02b572a90300feb40b49f2d83d0952fa7d7c9c511895daf6d31b639af82e5672c3a5ea5d5d
 
 {
     "name": "ShopJS",

@@ -1,6 +1,7 @@
 'use strict'
 
 const shopModel = require('../models/shop.model')
+const apikeyModel = require('../models/apikey.model')
 const bcrypt = require('bcrypt')
 const crypto = require('node:crypto')
 const KeyTokenService = require('./keyToken.service')
