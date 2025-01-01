@@ -44,6 +44,8 @@ const permission = (permission) => {
                 message: 'Permission Denied',
             })
         }
+
+        return next()
     }
 }
 
